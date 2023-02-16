@@ -1,12 +1,9 @@
 package com.orinine.ktan.board;
 
-import com.orinine.ktan.player.Player;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
-
     private final Hex[][] hexGrid;
     private Location[][] locationGrid;
     private final List<Road> roads;
@@ -16,24 +13,15 @@ public class Board {
         this.roads = new ArrayList<Road>();
     }
 
-    public List<int[]> getHexesCoordinatesFromDiceTarget(int diceTarget) {
-        var hexesCoordinates = new ArrayList<int[]>();
-
-        for (int i = 0; i < hexGrid.length; i++)
-            for (int j = 0; j < hexGrid[0].length; j++)
-                if (diceTarget == hexGrid[i][j].diceTarget())
-                    hexesCoordinates.add(new int[] { i, j });
-
-        return hexesCoordinates;
+    public Hex[][] getHexGrid() {
+        return hexGrid;
     }
 
-    public List<Location> getPointsFromHexCoordinates(int x, int y) {
-        var points = new ArrayList<Location>();
-
-        return points;
+    public Location[][] getLocationGrid() {
+        return locationGrid;
     }
 
-    public Player getPlayerWithTheLongestRoad() {
-        return null;
+    public List<Road> getRoads() {
+        return roads;
     }
 }
