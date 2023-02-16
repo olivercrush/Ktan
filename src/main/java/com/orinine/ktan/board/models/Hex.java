@@ -1,4 +1,4 @@
-package com.orinine.ktan.board;
+package com.orinine.ktan.board.models;
 
 public record Hex(HexType hexType, int diceTarget) {
     public enum HexType {
@@ -7,6 +7,7 @@ public record Hex(HexType hexType, int diceTarget) {
         HILLS,
         FIELDS,
         PASTURE,
-        DESERT
+        DESERT,
+        EMPTY
     }
 }

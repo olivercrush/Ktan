@@ -1,4 +1,4 @@
-package com.orinine.ktan.board;
+package com.orinine.ktan.board.models;
 
 import com.orinine.ktan.player.Player;
 

@@ -1,4 +1,4 @@
-package com.orinine.ktan.board;
+package com.orinine.ktan.board.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,7 @@ public class Board {
 
     public Board(Hex[][] hexGrid) {
         this.hexGrid = hexGrid;
+        // TODO : initialize location grid based on hex grid width / height
         this.roads = new ArrayList<Road>();
     }
 
