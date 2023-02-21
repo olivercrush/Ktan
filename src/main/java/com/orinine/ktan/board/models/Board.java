@@ -10,7 +10,14 @@ public class Board {
 
     public Board(Hex[][] hexGrid) {
         this.hexGrid = hexGrid;
-        // TODO : initialize location grid based on hex grid width / height
+
+        locationGrid = new Location[this.hexGrid.length][this.hexGrid[0].length];
+        for (var i = 0; i < locationGrid.length; i++) {
+            for (var j = 0; j < locationGrid[i].length; j++) {
+                locationGrid[i][j] = new Location();
+            }
+        }
+
         this.roads = new ArrayList<Road>();
     }
 

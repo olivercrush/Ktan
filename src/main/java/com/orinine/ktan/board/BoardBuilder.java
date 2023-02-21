@@ -10,9 +10,6 @@ import java.util.List;
 public class BoardBuilder {
 
     private Hex[][] hexGrid;
-    private Location[][] locationGrid;
-    private List<Road> roads;
-
     protected BoardBuilder() {
 
     }
@@ -23,16 +20,6 @@ public class BoardBuilder {
 
     public BoardBuilder setHexGrid(Hex[][] hexGrid) {
         this.hexGrid = hexGrid;
-        return this;
-    }
-
-    public BoardBuilder setLocationGrid(Location[][] locationGrid) {
-        this.locationGrid = locationGrid;
-        return this;
-    }
-
-    public BoardBuilder setRoads(List<Road> roads) {
-        this.roads = roads;
         return this;
     }
 

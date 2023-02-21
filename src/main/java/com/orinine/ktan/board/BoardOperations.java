@@ -9,7 +9,7 @@ import java.util.List;
 
 public class BoardOperations {
 
-    public List<Point> getHexesCoordinatesFromDiceTarget(Board board, int diceTarget) {
+    public static List<Point> getHexesCoordinatesFromDiceTarget(Board board, int diceTarget) {
         var hexGrid = board.getHexGrid();
         var hexesCoordinates = new ArrayList<Point>();
 
@@ -21,7 +21,7 @@ public class BoardOperations {
         return hexesCoordinates;
     }
 
-    public Player getPlayerWithTheLongestRoad(Board board) {
+    public static Player getPlayerWithTheLongestRoad(Board board) {
         return null;
     }
 }
