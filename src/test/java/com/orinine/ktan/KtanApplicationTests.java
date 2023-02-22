@@ -1,6 +1,7 @@
 package com.orinine.ktan;
 
 import com.orinine.ktan.board.BoardBuilder;
+import com.orinine.ktan.board.hexgrid.ClassicHexGridGenerator;
 import com.orinine.ktan.board.models.Board;
 import com.orinine.ktan.board.models.Hex;
 import org.junit.jupiter.api.Test;
@@ -11,15 +12,7 @@ class KtanApplicationTests {
 
     @Test
     void contextLoads() {
-        Hex[][] hexGrid = new Hex[][] {
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.DESERT, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-        };
+        var hexGrid = ClassicHexGridGenerator.getInstance().generate();
 
         Board board = BoardBuilder.aBoardBuilder()
                 .setHexGrid(hexGrid)
