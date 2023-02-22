@@ -1,11 +1,11 @@
 package com.orinine.ktan.board.models;
 
-import com.orinine.ktan.player.Player;
+import com.orinine.ktan.player.PlayerColor;
 
 public class Location {
 
-    private Player.PlayerColor color;
-    // building
-    // port
+    private PlayerColor color;
+    private Building building;
+    private Port port;
 
 }

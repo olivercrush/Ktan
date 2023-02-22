@@ -2,14 +2,11 @@ package com.orinine.ktan.board;
 
 import com.orinine.ktan.board.models.Board;
 import com.orinine.ktan.board.models.Hex;
-import com.orinine.ktan.board.models.Location;
-import com.orinine.ktan.board.models.Road;
-
-import java.util.List;
 
 public class BoardBuilder {
 
     private Hex[][] hexGrid;
+
     protected BoardBuilder() {
 
     }

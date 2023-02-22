@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Board {
     private final Hex[][] hexGrid;
-    private Location[][] locationGrid;
+    private final Location[][] locationGrid;
     private final List<Road> roads;
 
     public Board(Hex[][] hexGrid) {

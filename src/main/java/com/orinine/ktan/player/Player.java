@@ -21,11 +21,4 @@ public class Player {
     public void addScore(int amount) {
         this.score += amount;
     }
-
-    public enum PlayerColor {
-        RED,
-        YELLOW,
-        BLUE,
-        WHITE
-    }
 }
