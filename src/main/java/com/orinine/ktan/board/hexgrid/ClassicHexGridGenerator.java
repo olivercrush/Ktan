@@ -5,14 +5,24 @@ import com.orinine.ktan.board.utils.Point;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ClassicHexGridGenerator implements HexGridGenerator {
 
-    private final List<Point> board = new ArrayList<>() {{
+    private static final int WIDTH = 5;
+    private static final int HEIGHT = 5;
+
+    private static final List<Point> BOARD = new ArrayList<>() {{
+        add(new Point(1, 0));
+        add(new Point(2, 0));
+        add(new Point(3, 0));
+
+        add(new Point(0, 1));
         add(new Point(1, 1));
         add(new Point(2, 1));
         add(new Point(3, 1));
 
+        add(new Point(0, 2));
         add(new Point(1, 2));
         add(new Point(2, 2));
         add(new Point(3, 2));
@@ -22,19 +32,13 @@ public class ClassicHexGridGenerator implements HexGridGenerator {
         add(new Point(1, 3));
         add(new Point(2, 3));
         add(new Point(3, 3));
-        add(new Point(4, 3));
 
         add(new Point(1, 4));
         add(new Point(2, 4));
         add(new Point(3, 4));
-        add(new Point(4, 4));
-
-        add(new Point(1, 5));
-        add(new Point(2, 5));
-        add(new Point(3, 5));
     }};
 
-    private final List<Integer> dices = new ArrayList<>() {{
+    private static final List<Integer> DICE_TARGETS = new ArrayList<>() {{
         add(2);
         add(3);
         add(3);
@@ -55,7 +59,7 @@ public class ClassicHexGridGenerator implements HexGridGenerator {
         add(12);
     }};
 
-    private final List<Hex.HexType> hexTypes = new ArrayList<>() {{
+    private static final List<Hex.HexType> HEX_TYPES = new ArrayList<>() {{
         add(Hex.HexType.DESERT);
         add(Hex.HexType.HILLS);
         add(Hex.HexType.HILLS);
@@ -92,16 +96,40 @@ public class ClassicHexGridGenerator implements HexGridGenerator {
 
     @Override
     public Hex[][] generate() {
-        Hex[][] hexGrid = new Hex[][] {
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.DESERT, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.DESERT, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-                { new Hex(Hex.HexType.EMPTY, 0), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6), new Hex(Hex.HexType.EMPTY, 6) },
-        };
+        var hexTypes = new ArrayList<>(HEX_TYPES);
+        var diceTargets = new ArrayList<>(DICE_TARGETS);
+
+        Hex[][] hexGrid = new Hex[HEIGHT][WIDTH];
+
+        for (var i = 0; i < HEIGHT; i++)
+            for (var j = 0; j < WIDTH; j++)
+                if (BOARD.contains(new Point(j, i)))
+                    hexGrid[i][j] = getRandomTileAndDiceTarget(hexTypes, diceTargets);
+                else
+                    hexGrid[i][j] = new Hex(Hex.HexType.EMPTY, 0);
 
         return hexGrid;
+    }
+
+    private Hex getRandomTileAndDiceTarget(List<Hex.HexType> hexTypes, List<Integer> diceTargets) {
+        Hex.HexType hexType;
+        if (hexTypes.size() > 1)
+            hexType = hexTypes.get((new Random()).nextInt(hexTypes.size() - 1));
+        else
+            hexType = hexTypes.get(0);
+        hexTypes.remove(hexType);
+
+        var diceTarget = 0;
+        if (Hex.HexType.DESERT != hexType) {
+            int diceId;
+            if (diceTargets.size() > 1)
+                diceId = (new Random()).nextInt(diceTargets.size() - 1);
+            else
+                diceId = 0;
+            diceTarget = diceTargets.get(diceId);
+            diceTargets.remove(diceId);
+        }
+
+        return new Hex(hexType, diceTarget);
     }
 }

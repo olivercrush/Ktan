@@ -37,6 +37,7 @@ class KtanApplicationTests {
             case MOUNTAINS: return 'M';
             case PASTURE: return 'P';
             case FIELDS: return 'F';
+            case FOREST: return 'T';
             case HILLS: return 'H';
             default: return ' ';
         }
