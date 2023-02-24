@@ -1,0 +1,410 @@
+{
+  "hexGrid" : [ [ {
+    "hexType" : "FOREST",
+    "diceTarget" : 6
+  }, {
+    "hexType" : "DESERT",
+    "diceTarget" : 0
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 8
+  } ], [ {
+    "hexType" : "FIELDS",
+    "diceTarget" : 3
+  }, {
+    "hexType" : "MOUNTAINS",
+    "diceTarget" : 12
+  }, {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  } ], [ {
+    "hexType" : "HILLS",
+    "diceTarget" : 10
+  }, {
+    "hexType" : "HILLS",
+    "diceTarget" : 2
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 11
+  } ] ],
+  "locationGrid" : [ [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : "RED",
+    "building" : "VILLAGE",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : "BLUE",
+    "building" : "CITY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ] ],
+  "roads" : [ {
+    "playerColor" : "RED",
+    "points" : [ {
+      "x" : 3,
+      "y" : 3
+    }, {
+      "x" : 3,
+      "y" : 4
+    } ]
+  }, {
+    "playerColor" : "RED",
+    "points" : [ {
+      "x" : 1,
+      "y" : 5
+    }, {
+      "x" : 1,
+      "y" : 4
+    } ]
+  } ]
+}

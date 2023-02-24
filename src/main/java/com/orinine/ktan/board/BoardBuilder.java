@@ -2,10 +2,16 @@ package com.orinine.ktan.board;
 
 import com.orinine.ktan.board.models.Board;
 import com.orinine.ktan.board.models.Hex;
+import com.orinine.ktan.board.models.Location;
+import com.orinine.ktan.board.models.Road;
+
+import java.util.List;
 
 public class BoardBuilder {
 
     private Hex[][] hexGrid;
+    private Location[][] locationGrid;
+    private List<Road> roads;
 
     protected BoardBuilder() {
 
@@ -20,7 +26,20 @@ public class BoardBuilder {
         return this;
     }
 
+    public BoardBuilder setLocationGrid(Location[][] locationGrid) {
+        this.locationGrid = locationGrid;
+        return this;
+    }
+
+    public BoardBuilder setRoads(List<Road> roads) {
+        this.roads = roads;
+        return this;
+    }
+
     public Board build() {
+        if (locationGrid != null && roads != null)
+            return new Board(hexGrid, locationGrid, roads);
+
         return new Board(hexGrid);
     }
 

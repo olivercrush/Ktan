@@ -1,22 +1,10 @@
 package com.orinine.ktan.board.models;
 
+import com.orinine.ktan.board.utils.Point;
 import com.orinine.ktan.player.PlayerColor;
 
-public class Road {
+import java.util.List;
 
-    private final PlayerColor playerColor;
-    private final Location[] locations;
+public record Road(PlayerColor playerColor, List<Point> points) {
 
-    public Road(PlayerColor playerColor, Location[] locations) {
-        this.playerColor = playerColor;
-        this.locations = locations;
-    }
-
-    public PlayerColor getPlayer() {
-        return playerColor;
-    }
-
-    public Location[] getPoints() {
-        return locations;
-    }
 }
