@@ -1,5 +1,7 @@
 package com.orinine.ktan.board.json;
 
+import com.orinine.ktan.board.BoardBuilder;
+import com.orinine.ktan.board.hexgrid.ClassicHexGridGenerator;
 import com.orinine.ktan.board.models.*;
 import com.orinine.ktan.board.utils.Point;
 import com.orinine.ktan.player.PlayerColor;
@@ -35,7 +37,6 @@ public class BoardToJsonConverterTest {
             add(new Point(1, 4));
         }}));
 
-        System.out.println(BoardToJsonConverter.toJson(board));
         assertEquals(expectedJson, BoardToJsonConverter.toJson(board));
     }
 

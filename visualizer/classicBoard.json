@@ -1,0 +1,1040 @@
+{
+  "hexGrid" : [ [ {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  }, {
+    "hexType" : "FIELDS",
+    "diceTarget" : 8
+  }, {
+    "hexType" : "FOREST",
+    "diceTarget" : 10
+  }, {
+    "hexType" : "HILLS",
+    "diceTarget" : 8
+  }, {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  } ], [ {
+    "hexType" : "FOREST",
+    "diceTarget" : 11
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 4
+  }, {
+    "hexType" : "MOUNTAINS",
+    "diceTarget" : 6
+  }, {
+    "hexType" : "HILLS",
+    "diceTarget" : 9
+  }, {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  } ], [ {
+    "hexType" : "FIELDS",
+    "diceTarget" : 5
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 5
+  }, {
+    "hexType" : "FOREST",
+    "diceTarget" : 11
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 9
+  }, {
+    "hexType" : "FIELDS",
+    "diceTarget" : 3
+  } ], [ {
+    "hexType" : "DESERT",
+    "diceTarget" : 0
+  }, {
+    "hexType" : "FIELDS",
+    "diceTarget" : 10
+  }, {
+    "hexType" : "MOUNTAINS",
+    "diceTarget" : 4
+  }, {
+    "hexType" : "MOUNTAINS",
+    "diceTarget" : 3
+  }, {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  } ], [ {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 2
+  }, {
+    "hexType" : "HILLS",
+    "diceTarget" : 6
+  }, {
+    "hexType" : "FOREST",
+    "diceTarget" : 12
+  }, {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  } ] ],
+  "locationGrid" : [ [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ], [ {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  }, {
+    "color" : null,
+    "building" : "EMPTY",
+    "port" : "EMPTY"
+  } ] ],
+  "roads" : [ ]
+}
