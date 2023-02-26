@@ -49,9 +49,10 @@ def draw_hexagone(surface, type, dice_target, x, y):
     )
     pygame.draw.polygon(surface, get_color_from_hex_type(type), hex_vertices)
 
-    font = pygame.font.SysFont(None, 24)
-    img = font.render(str(dice_target), True, BLACK)
-    surface.blit(img, (center_x, center_y))
+    if type != "DESERT":
+        font = pygame.font.SysFont(None, 24)
+        img = font.render(str(dice_target), True, BLACK)
+        surface.blit(img, (center_x, center_y))
 
 def get_color_from_hex_type(hex_type):
     if hex_type == "FIELDS":
@@ -69,7 +70,7 @@ def get_color_from_hex_type(hex_type):
 
     return BLACK
 
-f = open('classicBoard.json')
+f = open('board.json')
 board_json = json.load(f)
 
 visualize(board_json)
