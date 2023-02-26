@@ -4,55 +4,10 @@
     "diceTarget" : 0
   }, {
     "hexType" : "FIELDS",
-    "diceTarget" : 4
-  }, {
-    "hexType" : "FIELDS",
-    "diceTarget" : 8
-  }, {
-    "hexType" : "FOREST",
-    "diceTarget" : 3
-  }, {
-    "hexType" : "EMPTY",
-    "diceTarget" : 0
-  } ], [ {
-    "hexType" : "HILLS",
-    "diceTarget" : 11
-  }, {
-    "hexType" : "MOUNTAINS",
-    "diceTarget" : 5
-  }, {
-    "hexType" : "FIELDS",
     "diceTarget" : 6
   }, {
     "hexType" : "MOUNTAINS",
-    "diceTarget" : 10
-  }, {
-    "hexType" : "EMPTY",
-    "diceTarget" : 0
-  } ], [ {
-    "hexType" : "PASTURE",
     "diceTarget" : 8
-  }, {
-    "hexType" : "HILLS",
-    "diceTarget" : 3
-  }, {
-    "hexType" : "HILLS",
-    "diceTarget" : 9
-  }, {
-    "hexType" : "PASTURE",
-    "diceTarget" : 9
-  }, {
-    "hexType" : "FOREST",
-    "diceTarget" : 5
-  } ], [ {
-    "hexType" : "PASTURE",
-    "diceTarget" : 4
-  }, {
-    "hexType" : "FIELDS",
-    "diceTarget" : 10
-  }, {
-    "hexType" : "MOUNTAINS",
-    "diceTarget" : 6
   }, {
     "hexType" : "FOREST",
     "diceTarget" : 11
@@ -60,14 +15,59 @@
     "hexType" : "EMPTY",
     "diceTarget" : 0
   } ], [ {
-    "hexType" : "EMPTY",
-    "diceTarget" : 0
+    "hexType" : "PASTURE",
+    "diceTarget" : 10
   }, {
     "hexType" : "PASTURE",
-    "diceTarget" : 2
+    "diceTarget" : 11
+  }, {
+    "hexType" : "FIELDS",
+    "diceTarget" : 3
+  }, {
+    "hexType" : "MOUNTAINS",
+    "diceTarget" : 5
+  }, {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  } ], [ {
+    "hexType" : "FIELDS",
+    "diceTarget" : 4
+  }, {
+    "hexType" : "FOREST",
+    "diceTarget" : 4
+  }, {
+    "hexType" : "HILLS",
+    "diceTarget" : 10
+  }, {
+    "hexType" : "FIELDS",
+    "diceTarget" : 9
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 6
+  } ], [ {
+    "hexType" : "HILLS",
+    "diceTarget" : 8
   }, {
     "hexType" : "DESERT",
     "diceTarget" : 0
+  }, {
+    "hexType" : "MOUNTAINS",
+    "diceTarget" : 9
+  }, {
+    "hexType" : "FOREST",
+    "diceTarget" : 2
+  }, {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  } ], [ {
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 3
+  }, {
+    "hexType" : "HILLS",
+    "diceTarget" : 5
   }, {
     "hexType" : "FOREST",
     "diceTarget" : 12

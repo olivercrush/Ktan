@@ -1,4 +1,5 @@
-import sys, pygame
+import os, sys, pygame
+import time
 import json
 
 size = width, height = 1920, 1080
@@ -15,21 +16,33 @@ ORANGE = 255, 128, 0
 GREEN = 0, 255, 0
 LIGHT_GREEN = 0, 128, 0
 
-def visualize(board_json):
+def start_visualizer():
     pygame.init()
     pygame.font.init()
     screen = pygame.display.set_mode(size)
 
+    filename = "board.json"
+    f = open(filename)
+    board_json = json.load(f)
+    f.close
+
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_q:
+                    print("reload")
+                    f = open(filename)
+                    board_json = json.load(f)
+                    f.close
 
         screen.fill(BLACK)
         for y in range(len(board_json['hexGrid'])):
             for x in range(len(board_json['hexGrid'][y])):
                 draw_hexagone(screen, board_json['hexGrid'][y][x]['hexType'], board_json['hexGrid'][y][x]['diceTarget'], x, y)
 
-        pygame.display.flip()
+        pygame.display.flip()  
 
 def draw_hexagone(surface, type, dice_target, x, y):
     row_offset = 0
@@ -70,7 +83,4 @@ def get_color_from_hex_type(hex_type):
 
     return BLACK
 
-f = open('board.json')
-board_json = json.load(f)
-
-visualize(board_json)
+start_visualizer()
