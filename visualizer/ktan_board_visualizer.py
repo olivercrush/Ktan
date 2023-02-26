@@ -17,6 +17,7 @@ LIGHT_GREEN = 0, 128, 0
 
 def visualize(board_json):
     pygame.init()
+    pygame.font.init()
     screen = pygame.display.set_mode(size)
 
     while True:
@@ -26,11 +27,11 @@ def visualize(board_json):
         screen.fill(BLACK)
         for y in range(len(board_json['hexGrid'])):
             for x in range(len(board_json['hexGrid'][y])):
-                draw_hexagone(screen, board_json['hexGrid'][y][x]['hexType'], x, y)
+                draw_hexagone(screen, board_json['hexGrid'][y][x]['hexType'], board_json['hexGrid'][y][x]['diceTarget'], x, y)
 
         pygame.display.flip()
 
-def draw_hexagone(surface, type, x, y):
+def draw_hexagone(surface, type, dice_target, x, y):
     row_offset = 0
     if y % 2 == 1:
         row_offset = HEX_WIDTH / 2
@@ -48,6 +49,10 @@ def draw_hexagone(surface, type, x, y):
     )
     pygame.draw.polygon(surface, get_color_from_hex_type(type), hex_vertices)
 
+    font = pygame.font.SysFont(None, 24)
+    img = font.render(str(dice_target), True, BLACK)
+    surface.blit(img, (center_x, center_y))
+
 def get_color_from_hex_type(hex_type):
     if hex_type == "FIELDS":
         return YELLOW
@@ -63,7 +68,6 @@ def get_color_from_hex_type(hex_type):
         return LIGHT_YELLOW
 
     return BLACK
-
 
 f = open('classicBoard.json')
 board_json = json.load(f)
