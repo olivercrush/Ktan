@@ -3,59 +3,59 @@
     "hexType" : "EMPTY",
     "diceTarget" : 0
   }, {
-    "hexType" : "FIELDS",
-    "diceTarget" : 6
+    "hexType" : "HILLS",
+    "diceTarget" : 4
   }, {
     "hexType" : "MOUNTAINS",
-    "diceTarget" : 8
+    "diceTarget" : 10
   }, {
     "hexType" : "FOREST",
-    "diceTarget" : 11
+    "diceTarget" : 4
   }, {
     "hexType" : "EMPTY",
     "diceTarget" : 0
   } ], [ {
     "hexType" : "PASTURE",
-    "diceTarget" : 10
-  }, {
-    "hexType" : "PASTURE",
     "diceTarget" : 11
   }, {
-    "hexType" : "FIELDS",
-    "diceTarget" : 3
-  }, {
-    "hexType" : "MOUNTAINS",
-    "diceTarget" : 5
-  }, {
-    "hexType" : "EMPTY",
-    "diceTarget" : 0
-  } ], [ {
-    "hexType" : "FIELDS",
-    "diceTarget" : 4
-  }, {
-    "hexType" : "FOREST",
-    "diceTarget" : 4
-  }, {
-    "hexType" : "HILLS",
-    "diceTarget" : 10
-  }, {
-    "hexType" : "FIELDS",
-    "diceTarget" : 9
-  }, {
-    "hexType" : "PASTURE",
-    "diceTarget" : 6
-  } ], [ {
     "hexType" : "HILLS",
     "diceTarget" : 8
+  }, {
+    "hexType" : "MOUNTAINS",
+    "diceTarget" : 2
   }, {
     "hexType" : "DESERT",
     "diceTarget" : 0
   }, {
-    "hexType" : "MOUNTAINS",
+    "hexType" : "EMPTY",
+    "diceTarget" : 0
+  } ], [ {
+    "hexType" : "FIELDS",
+    "diceTarget" : 5
+  }, {
+    "hexType" : "FIELDS",
+    "diceTarget" : 11
+  }, {
+    "hexType" : "FOREST",
     "diceTarget" : 9
   }, {
     "hexType" : "FOREST",
-    "diceTarget" : 2
+    "diceTarget" : 3
+  }, {
+    "hexType" : "FIELDS",
+    "diceTarget" : 9
+  } ], [ {
+    "hexType" : "PASTURE",
+    "diceTarget" : 10
+  }, {
+    "hexType" : "PASTURE",
+    "diceTarget" : 8
+  }, {
+    "hexType" : "MOUNTAINS",
+    "diceTarget" : 6
+  }, {
+    "hexType" : "FIELDS",
+    "diceTarget" : 6
   }, {
     "hexType" : "EMPTY",
     "diceTarget" : 0
