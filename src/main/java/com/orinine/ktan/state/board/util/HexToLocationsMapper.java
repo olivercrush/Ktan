@@ -1,4 +1,4 @@
-package com.orinine.ktan.board.utils;
+package com.orinine.ktan.state.board.util;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,9 @@
-package com.orinine.ktan.board;
+package com.orinine.ktan.state.board;
 
-import com.orinine.ktan.board.models.Board;
-import com.orinine.ktan.board.models.Hex;
-import com.orinine.ktan.board.models.Location;
-import com.orinine.ktan.board.models.Road;
+import com.orinine.ktan.state.board.model.Board;
+import com.orinine.ktan.state.board.model.Hex;
+import com.orinine.ktan.state.board.model.Location;
+import com.orinine.ktan.state.board.model.Road;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.orinine.ktan.board;
+package com.orinine.ktan.state.board;
 
-import com.orinine.ktan.board.models.Board;
-import com.orinine.ktan.board.utils.Point;
-import com.orinine.ktan.player.Player;
+import com.orinine.ktan.state.board.model.Board;
+import com.orinine.ktan.state.board.util.Point;
+import com.orinine.ktan.state.player.Player;
 
 import java.util.ArrayList;
 import java.util.List;

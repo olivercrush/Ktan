@@ -1,10 +1,9 @@
 package com.orinine.ktan.board.json;
 
-import com.orinine.ktan.board.BoardBuilder;
-import com.orinine.ktan.board.hexgrid.ClassicHexGridGenerator;
-import com.orinine.ktan.board.models.*;
-import com.orinine.ktan.board.utils.Point;
-import com.orinine.ktan.player.PlayerColor;
+import com.orinine.ktan.state.board.json.BoardToJsonConverter;
+import com.orinine.ktan.state.board.model.*;
+import com.orinine.ktan.state.board.util.Point;
+import com.orinine.ktan.state.player.PlayerColor;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

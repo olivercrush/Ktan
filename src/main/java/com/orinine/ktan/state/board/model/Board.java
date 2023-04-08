@@ -1,8 +1,6 @@
-package com.orinine.ktan.board.models;
+package com.orinine.ktan.state.board.model;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.orinine.ktan.board.BoardBuilder;
-import com.orinine.ktan.board.utils.Point;
+import com.orinine.ktan.state.board.util.Point;
 
 import java.util.ArrayList;
 import java.util.Arrays;

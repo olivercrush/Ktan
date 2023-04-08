@@ -1,4 +1,4 @@
-package com.orinine.ktan.player;
+package com.orinine.ktan.state.player;
 
 public enum PlayerColor {
     RED,

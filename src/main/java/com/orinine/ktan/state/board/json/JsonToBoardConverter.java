@@ -1,7 +1,7 @@
-package com.orinine.ktan.board.json;
+package com.orinine.ktan.state.board.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.orinine.ktan.board.models.Board;
+import com.orinine.ktan.state.board.model.Board;
 
 import java.io.IOException;
 

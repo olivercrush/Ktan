@@ -1,10 +1,15 @@
 import sys, pygame
+import threading
+import socket
 import json
 
 size = width, height = 1920, 1080
 
 HEX_WIDTH = 200
 HEX_HEIGTH = 200
+
+HOST = "127.0.0.1"
+PORT = 65500
 
 BLACK = 0, 0, 0
 GREY = 128, 128, 128
@@ -15,33 +20,57 @@ ORANGE = 255, 128, 0
 GREEN = 0, 255, 0
 LIGHT_GREEN = 0, 128, 0
 
+board_json = None
+board_updated = False
+
 def start_visualizer():
+    global board_json
+    global board_updated
+
     pygame.init()
     pygame.font.init()
     screen = pygame.display.set_mode(size)
 
-    filename = "board.json"
-    f = open(filename)
-    board_json = json.load(f)
-    f.close
+    thread = threading.Thread(target=socket_thread, args=(1,), daemon=True)
+    thread.start()
+
+    screen.fill(BLACK)
+    pygame.display.flip()
 
     while True:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT: sys.exit()
+            if event.type == pygame.QUIT:
+                sys.exit()
 
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_q:
-                    print("reload")
-                    f = open(filename)
+        if board_json is not None and board_updated:
+            board_updated = False
+            screen.fill(BLACK)
+            for y in range(len(board_json['hexGrid'])):
+                for x in range(len(board_json['hexGrid'][y])):
+                    draw_hexagone(screen, board_json['hexGrid'][y][x]['hexType'], board_json['hexGrid'][y][x]['diceTarget'], x, y)
+
+            pygame.display.flip()
+
+def socket_thread(name):
+    global board_json
+    global board_updated
+    
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind((HOST, PORT))
+        s.listen()
+        conn, addr = s.accept()
+
+        with conn:
+            while True:
+                data = conn.recv(1024)
+
+                if data:
+                    f = open(data.decode('utf8').replace("\r\n", ""))
                     board_json = json.load(f)
                     f.close
+                    board_updated = True
+                    conn.sendall(data)
 
-        screen.fill(BLACK)
-        for y in range(len(board_json['hexGrid'])):
-            for x in range(len(board_json['hexGrid'][y])):
-                draw_hexagone(screen, board_json['hexGrid'][y][x]['hexType'], board_json['hexGrid'][y][x]['diceTarget'], x, y)
-
-        pygame.display.flip()  
 
 def draw_hexagone(surface, type, dice_target, x, y):
     row_offset = 0

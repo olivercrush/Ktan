@@ -1,7 +1,7 @@
-package com.orinine.ktan.board.hexgrid;
+package com.orinine.ktan.state.board.hexgrid;
 
-import com.orinine.ktan.board.models.Hex;
-import com.orinine.ktan.board.utils.Point;
+import com.orinine.ktan.state.board.model.Hex;
+import com.orinine.ktan.state.board.util.Point;
 
 import java.util.ArrayList;
 import java.util.List;

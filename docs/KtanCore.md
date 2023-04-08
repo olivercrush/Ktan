@@ -1,12 +1,5 @@
 # KtanCore
 
-## Rules Overview
-
-Ktan is based on Catan, the rules can be found on this [official page](https://www.catan.com/understand-catan/game-rules).
-In order to win a game of Ktan, you must obtain a certain amount of points (10 by default).
-
-## KtanCore
-
 KtanCore is the system representing the game core. Its responsibilities are the following :
 
 1. Receive and process incoming inputs, convert them in internal Actions

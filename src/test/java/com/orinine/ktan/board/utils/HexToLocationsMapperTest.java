@@ -1,5 +1,7 @@
 package com.orinine.ktan.board.utils;
 
+import com.orinine.ktan.state.board.util.HexToLocationsMapper;
+import com.orinine.ktan.state.board.util.Point;
 import org.junit.jupiter.api.Test;
 
 public class HexToLocationsMapperTest {

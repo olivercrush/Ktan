@@ -1,20 +1,46 @@
 package com.orinine.ktan;
 
-import com.orinine.ktan.board.BoardBuilder;
-import com.orinine.ktan.board.hexgrid.ClassicHexGridGenerator;
-import com.orinine.ktan.board.models.Board;
-import com.orinine.ktan.board.models.Hex;
+import com.orinine.ktan.state.State;
+import com.orinine.ktan.state.board.BoardBuilder;
+import com.orinine.ktan.state.board.hexgrid.ClassicHexGridGenerator;
+import com.orinine.ktan.state.board.model.Hex;
+import com.orinine.ktan.state.debug.DebugStateObserver;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.io.IOException;
+import java.util.List;
 
 @SpringBootTest
 class KtanApplicationTests {
 
     @Test
-    void contextLoads() {
+    void contextLoads() throws IOException, InterruptedException {
+        debugSocketTest();
+    }
+
+    private void debugSocketTest() throws IOException, InterruptedException {
+        var socketObserver = new DebugStateObserver("127.0.0.1", 65500);
+        var state = new State(List.of(socketObserver));
+
+        for (var i = 0; i < 5; i++) {
+            var hexGrid = ClassicHexGridGenerator.getInstance().generate();
+
+            var board = BoardBuilder.aBoardBuilder()
+                    .setHexGrid(hexGrid)
+                    .build();
+
+            state.updateBoard(board);
+            Thread.sleep(5000);
+        }
+
+        socketObserver.close();
+    }
+
+    private void consoleDisplayTest() {
         var hexGrid = ClassicHexGridGenerator.getInstance().generate();
 
-        Board board = BoardBuilder.aBoardBuilder()
+        var board = BoardBuilder.aBoardBuilder()
                 .setHexGrid(hexGrid)
                 .build();
 

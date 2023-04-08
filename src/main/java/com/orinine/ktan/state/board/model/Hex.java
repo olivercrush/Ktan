@@ -1,4 +1,4 @@
-package com.orinine.ktan.board.models;
+package com.orinine.ktan.state.board.model;
 
 public record Hex(HexType hexType, int diceTarget) {
     public enum HexType {
