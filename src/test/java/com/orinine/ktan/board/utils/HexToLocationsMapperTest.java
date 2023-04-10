@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 public class HexToLocationsMapperTest {
 
+    // TODO : FIX MAPPING
+
     @Test
     public void testZeroZeroHexToPoints() {
         var locations = HexToLocationsMapper.map(new Point(0, 0));

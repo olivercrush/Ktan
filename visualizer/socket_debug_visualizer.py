@@ -2,6 +2,7 @@ import sys, pygame
 import threading
 import socket
 import json
+import math
 
 size = width, height = 1920, 1080
 
@@ -12,6 +13,7 @@ HOST = "127.0.0.1"
 PORT = 65500
 
 BLACK = 0, 0, 0
+RED = 255, 0, 0
 GREY = 128, 128, 128
 WHITE = 255, 255, 255
 YELLOW = 255, 255, 0
@@ -49,6 +51,10 @@ def start_visualizer():
                 for x in range(len(board_json['hexGrid'][y])):
                     draw_hexagone(screen, board_json['hexGrid'][y][x]['hexType'], board_json['hexGrid'][y][x]['diceTarget'], x, y)
 
+            for y in range(len(board_json['locationGrid'])):
+                for x in range(len(board_json['locationGrid'][y])):
+                    draw_location(screen, board_json['locationGrid'][y][x], x, y)
+
             pygame.display.flip()
 
 def socket_thread(name):
@@ -71,11 +77,41 @@ def socket_thread(name):
                     board_updated = True
                     conn.sendall(data)
 
+def draw_location(surface, type, x, y):
+    hexagone_offset = 0
+    row_offset = 0
+    col_offset = 0
+    row_multiplicator = HEX_WIDTH
+    if y % 3 == 0:
+        row_offset = HEX_WIDTH / 2
+        row_multiplicator = HEX_WIDTH
+    if (y + 1) % 3 == 0:
+        col_offset = 3 * (HEX_HEIGTH / 4)
+    if (y + 2) % 3 == 0:
+        col_offset = HEX_HEIGTH / 4
+    #if math.floor(y / 3) % 2 == 1:
+    #    hexagone_offset = HEX_WIDTH / 2
+
+    if x == 1 and y == 3:
+        print("x : " + str(x))
+        print("y : " + str(y))
+        print("hexagone_offset : " + str(hexagone_offset))
+        print("row_offset : " + str(row_offset))
+        print("col_offset : " + str(col_offset))
+        print("row_multiplicator : " + str(row_multiplicator))
+
+    display_x = x * row_multiplicator + hexagone_offset + row_offset
+    display_y = math.floor(y / 3) * HEX_HEIGTH + col_offset
+
+    pygame.draw.circle(surface, RED, (display_x, display_y), 3)
+    font = pygame.font.SysFont(None, 24)
+    img = font.render("(" + str(x) + ";" + str(y) + ")", True, RED)
+    surface.blit(img, (display_x + 5, display_y - 20))
 
 def draw_hexagone(surface, type, dice_target, x, y):
     row_offset = 0
     if y % 2 == 1:
-        row_offset = HEX_WIDTH / 2
+        row_offset = HEX_WIDTH / 2               
 
     center_x = (x + 1) * HEX_WIDTH + row_offset
     center_y = (y + 1) * (HEX_HEIGTH * 3 / 4)
@@ -86,7 +122,7 @@ def draw_hexagone(surface, type, dice_target, x, y):
         (center_x - HEX_WIDTH / 2, center_y + HEX_HEIGTH / 4), 
         (center_x, center_y + HEX_HEIGTH / 2), 
         (center_x + HEX_WIDTH / 2, center_y + HEX_HEIGTH / 4), 
-        (center_x + HEX_WIDTH / 2, center_y- HEX_HEIGTH / 4)
+        (center_x + HEX_WIDTH / 2, center_y - HEX_HEIGTH / 4)
     )
     pygame.draw.polygon(surface, get_color_from_hex_type(type), hex_vertices)
 

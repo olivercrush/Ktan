@@ -3,8 +3,11 @@ package com.orinine.ktan;
 import com.orinine.ktan.state.State;
 import com.orinine.ktan.state.board.BoardBuilder;
 import com.orinine.ktan.state.board.hexgrid.ClassicHexGridGenerator;
+import com.orinine.ktan.state.board.model.Building;
 import com.orinine.ktan.state.board.model.Hex;
+import com.orinine.ktan.state.board.model.Location;
 import com.orinine.ktan.state.debug.DebugStateObserver;
+import com.orinine.ktan.state.player.PlayerColor;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -23,16 +26,16 @@ class KtanApplicationTests {
         var socketObserver = new DebugStateObserver("127.0.0.1", 65500);
         var state = new State(List.of(socketObserver));
 
-        for (var i = 0; i < 5; i++) {
-            var hexGrid = ClassicHexGridGenerator.getInstance().generate();
+        var hexGrid = ClassicHexGridGenerator.getInstance().generate();
 
-            var board = BoardBuilder.aBoardBuilder()
-                    .setHexGrid(hexGrid)
-                    .build();
+        var board = BoardBuilder.aBoardBuilder()
+                .setHexGrid(hexGrid)
+                .build();
 
-            state.updateBoard(board);
-            Thread.sleep(5000);
-        }
+        board.getLocationGrid()[5][5] = new Location(PlayerColor.RED, Building.VILLAGE, null);
+
+        state.updateBoard(board);
+        Thread.sleep(100000);
 
         socketObserver.close();
     }
