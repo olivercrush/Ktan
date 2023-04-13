@@ -53,7 +53,7 @@ def start_visualizer():
 
             for y in range(len(board_json['locationGrid'])):
                 for x in range(len(board_json['locationGrid'][y])):
-                    draw_location(screen, board_json['locationGrid'][y][x], x, y)
+                    draw_location2(screen, board_json['locationGrid'][y][x], x, y)
 
             pygame.display.flip()
 
@@ -89,19 +89,23 @@ def draw_location(surface, type, x, y):
         col_offset = 3 * (HEX_HEIGTH / 4)
     if (y + 2) % 3 == 0:
         col_offset = HEX_HEIGTH / 4
-    #if math.floor(y / 3) % 2 == 1:
-    #    hexagone_offset = HEX_WIDTH / 2
-
-    if x == 1 and y == 3:
-        print("x : " + str(x))
-        print("y : " + str(y))
-        print("hexagone_offset : " + str(hexagone_offset))
-        print("row_offset : " + str(row_offset))
-        print("col_offset : " + str(col_offset))
-        print("row_multiplicator : " + str(row_multiplicator))
 
     display_x = x * row_multiplicator + hexagone_offset + row_offset
     display_y = math.floor(y / 3) * HEX_HEIGTH + col_offset
+
+    pygame.draw.circle(surface, RED, (display_x, display_y), 3)
+    font = pygame.font.SysFont(None, 24)
+    img = font.render("(" + str(x) + ";" + str(y) + ")", True, RED)
+    surface.blit(img, (display_x + 5, display_y - 20))
+
+def draw_location2(surface, type, x, y):
+    x_offset = 0
+    y_offset = 0
+    if math.ceil(y / 2) % 2 == 0:
+        x_offset = HEX_WIDTH / 2
+
+    display_x = x * HEX_WIDTH + x_offset
+    display_y = y * HEX_HEIGTH / 4 + y_offset
 
     pygame.draw.circle(surface, RED, (display_x, display_y), 3)
     font = pygame.font.SysFont(None, 24)
