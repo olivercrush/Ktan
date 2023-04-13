@@ -95,7 +95,7 @@ public class HexToLocationsMapperTest {
     @Test
     public void testOneTwoHexToPoints() {
         var locations = HexToLocationsMapper.map(new Point(1, 2));
-        // !
+
         assert(locations.get(0).equals(new Point(1, 4)));
         assert(locations.get(1).equals(new Point(1, 5)));
         assert(locations.get(2).equals(new Point(2, 5)));
@@ -114,5 +114,41 @@ public class HexToLocationsMapperTest {
         assert(locations.get(3).equals(new Point(2, 6)));
         assert(locations.get(4).equals(new Point(3, 6)));
         assert(locations.get(5).equals(new Point(2, 7)));
+    }
+
+    @Test
+    public void testZeroThreeHexToPoints() {
+        var locations = HexToLocationsMapper.map(new Point(0, 3));
+
+        assert(locations.get(0).equals(new Point(1, 6)));
+        assert(locations.get(1).equals(new Point(0, 7)));
+        assert(locations.get(2).equals(new Point(1, 7)));
+        assert(locations.get(3).equals(new Point(0, 8)));
+        assert(locations.get(4).equals(new Point(1, 8)));
+        assert(locations.get(5).equals(new Point(1, 9)));
+    }
+
+    @Test
+    public void testOneThreeHexToPoints() {
+        var locations = HexToLocationsMapper.map(new Point(1, 3));
+
+        assert(locations.get(0).equals(new Point(2, 6)));
+        assert(locations.get(1).equals(new Point(1, 7)));
+        assert(locations.get(2).equals(new Point(2, 7)));
+        assert(locations.get(3).equals(new Point(1, 8)));
+        assert(locations.get(4).equals(new Point(2, 8)));
+        assert(locations.get(5).equals(new Point(2, 9)));
+    }
+
+    @Test
+    public void testTwoThreeHexToPoints() {
+        var locations = HexToLocationsMapper.map(new Point(2, 3));
+
+        assert(locations.get(0).equals(new Point(3, 6)));
+        assert(locations.get(1).equals(new Point(2, 7)));
+        assert(locations.get(2).equals(new Point(3, 7)));
+        assert(locations.get(3).equals(new Point(2, 8)));
+        assert(locations.get(4).equals(new Point(3, 8)));
+        assert(locations.get(5).equals(new Point(3, 9)));
     }
 }
