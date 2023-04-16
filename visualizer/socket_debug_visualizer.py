@@ -27,7 +27,6 @@ GREY = 128, 128, 128
 BLACK = 0, 0, 0
 WHITE = 255, 255, 255
 
-
 board_json = None
 board_updated = False
 
@@ -59,7 +58,7 @@ def start_visualizer():
 
             for y in range(len(board_json['locationGrid'])):
                 for x in range(len(board_json['locationGrid'][y])):
-                    draw_location(screen, board_json['locationGrid'][y][x]['building'], board_json['locationGrid'][y][x]['color'], x, y)
+                    draw_location(screen, board_json['locationGrid'][y][x]['building'], board_json['locationGrid'][y][x]['port'], board_json['locationGrid'][y][x]['color'], x, y)
 
             for r in board_json['roads']:
                 draw_road(screen, r["playerColor"], r["points"][0], r["points"][1])
@@ -91,14 +90,34 @@ def draw_road(surface, color, start, end):
     point2 = get_display_location_coordinates(int(end['x']), int(end['y']))
     pygame.draw.line(surface, get_color_from_player_color(color), point1, point2, 3)
 
-def draw_location(surface, type, color, x, y):
+def draw_location(surface, type, port, color, x, y):
     if type == "VILLAGE":
         pygame.draw.circle(surface, get_color_from_player_color(color), get_display_location_coordinates(x, y), 5)
     elif type == "CITY":
         pygame.draw.circle(surface, get_color_from_player_color(color), get_display_location_coordinates(x, y), 5)
         pygame.draw.circle(surface, get_color_from_player_color(color), get_display_location_coordinates(x, y), 10, 3)
 
-    #display_x, display_y = get_display_location_coordinates(x, y)
+    font = pygame.font.SysFont(None, 24)
+    display_x, display_y = get_display_location_coordinates(x, y)
+    if port == "GENERAL":
+        img = font.render("PORT (G)", True, WHITE)
+        surface.blit(img, (display_x + 5, display_y - 20))
+    elif port == "WHEAT":
+        img = font.render("PORT (W)", True, WHITE)
+        surface.blit(img, (display_x + 5, display_y - 20))
+    elif port == "WOOD":
+        img = font.render("PORT (WO)", True, WHITE)
+        surface.blit(img, (display_x + 5, display_y - 20))
+    elif port == "BRICK":
+        img = font.render("PORT (B)", True, WHITE)
+        surface.blit(img, (display_x + 5, display_y - 20))
+    elif port == "SHEEP":
+        img = font.render("PORT (S)", True, WHITE)
+        surface.blit(img, (display_x + 5, display_y - 20))
+    elif port == "ROCK":
+        img = font.render("PORT (R)", True, WHITE)
+        surface.blit(img, (display_x + 5, display_y - 20))
+
     #font = pygame.font.SysFont(None, 24)
     #img = font.render("(" + str(x) + ";" + str(y) + ")", True, RED)
     #surface.blit(img, (display_x + 5, display_y - 20))

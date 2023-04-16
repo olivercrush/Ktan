@@ -3,10 +3,7 @@ package com.orinine.ktan;
 import com.orinine.ktan.state.State;
 import com.orinine.ktan.state.board.BoardBuilder;
 import com.orinine.ktan.state.board.hexgrid.ClassicHexGridGenerator;
-import com.orinine.ktan.state.board.model.Building;
-import com.orinine.ktan.state.board.model.Hex;
-import com.orinine.ktan.state.board.model.Location;
-import com.orinine.ktan.state.board.model.Road;
+import com.orinine.ktan.state.board.model.*;
 import com.orinine.ktan.state.board.util.Point;
 import com.orinine.ktan.state.debug.DebugStateObserver;
 import com.orinine.ktan.state.player.PlayerColor;
@@ -33,6 +30,13 @@ class KtanApplicationTests {
         var board = BoardBuilder.aBoardBuilder()
                 .setHexGrid(hexGrid)
                 .build();
+
+        board.getLocationGrid()[0][1] = new Location(null, Building.EMPTY, Port.GENERAL);
+        board.getLocationGrid()[0][2] = new Location(null, Building.EMPTY, Port.WHEAT);
+        board.getLocationGrid()[0][3] = new Location(null, Building.EMPTY, Port.WOOD);
+        board.getLocationGrid()[3][0] = new Location(null, Building.EMPTY, Port.BRICK);
+        board.getLocationGrid()[5][0] = new Location(null, Building.EMPTY, Port.SHEEP);
+        board.getLocationGrid()[6][0] = new Location(null, Building.EMPTY, Port.ROCK);
 
         board.getLocationGrid()[5][3] = new Location(PlayerColor.BLUE, Building.VILLAGE, null);
         board.getLocationGrid()[3][2] = new Location(PlayerColor.BLUE, Building.CITY, null);
