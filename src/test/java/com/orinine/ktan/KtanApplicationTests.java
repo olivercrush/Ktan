@@ -22,7 +22,7 @@ class KtanApplicationTests {
     }
 
     private void debugSocketTest() throws IOException, InterruptedException {
-        var socketObserver = new DebugStateObserver("127.0.0.1", 65500);
+        var socketObserver = new DebugStateObserver(65500);
         var state = new State(List.of(socketObserver));
 
         var hexGrid = ClassicHexGridGenerator.getInstance().generate();
@@ -59,7 +59,6 @@ class KtanApplicationTests {
 
         state.updateBoard(board);
         Thread.sleep(100000);
-
         socketObserver.close();
     }
 

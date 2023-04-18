@@ -7,44 +7,79 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
+import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class DebugStateObserver implements StateObserver {
     private static final Logger LOGGER = LoggerFactory.getLogger(DebugStateObserver.class);
     private static final String DEBUG_FILENAME = "debug_board.json";
+    private static final String END_COMMAND = "VISUALIZER_DISCONNECT";
 
-    private final Socket socket;
-    private final PrintWriter out;
-    private final BufferedReader in;
+    private final ServerSocket serverSocket;
+    private Socket clientSocket;
+    private PrintWriter out;
+    private BufferedReader in;
 
-    public DebugStateObserver(String ip, int port) throws IOException {
-        socket = new Socket(ip, port);
-        out = new PrintWriter(socket.getOutputStream(), true);
-        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    // TODO Ktan#11 - Fix DebugStateObserver message receiving
+
+    public DebugStateObserver(int port) throws IOException {
+        serverSocket = new ServerSocket(port);
+
+        var thread = new Thread(this::startServer);
+        thread.start();
+    }
+
+    private void startServer() {
+        try {
+            clientSocket = serverSocket.accept();
+            out = new PrintWriter(clientSocket.getOutputStream(), true);
+            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
+            sendMessageToClientSocket();
+
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                System.out.println("Received from client : " + inputLine);
+                if (END_COMMAND.equals(inputLine))
+                    break;
+            }
+            this.close();
+        } catch (SocketException e) {
+            System.out.println("Client disconnected");
+        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public void notify(State stage) {
+    public void notify(State state) {
         try {
-            var boardJson = BoardToJsonConverter.toJson(stage.getBoard());
+            var boardJson = BoardToJsonConverter.toJson(state.getBoard());
 
             var fileWriter = new FileWriter("visualizer/" + DEBUG_FILENAME);
             fileWriter.write(boardJson);
             fileWriter.close();
 
-            // LOGGER.debug("Sending info to Socket : {}", boardJson);
-            System.out.println("Sending debug filename to Socket : " + DEBUG_FILENAME);
-            out.println(DEBUG_FILENAME);
-
-            var response = in.readLine();
-            // LOGGER.info("Received response : {}", response);
-            System.out.println("Received response : " + response);
+            sendMessageToClientSocket();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
+    private void sendMessageToClientSocket() {
+        if (out != null) {
+            // LOGGER.debug("Sending info to Socket : {}", boardJson);
+            System.out.println("Sending debug filename to Socket : " + DEBUG_FILENAME);
+            out.println(DEBUG_FILENAME);
+        }
+    }
+
     public void close() throws IOException {
-        socket.close();
+        in.close();
+        out.close();
+        clientSocket.close();
+        serverSocket.close();
     }
 }

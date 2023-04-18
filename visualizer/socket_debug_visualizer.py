@@ -14,6 +14,7 @@ GLOBAL_Y_OFFSET = 100
 
 HOST = "127.0.0.1"
 PORT = 65500
+END_COMMAND = b"VISUALIZER_DISCONNECT"
 
 BRIGHT_RED = 255, 0, 0
 BRIGHT_YELLOW = 255, 255, 0
@@ -27,12 +28,15 @@ GREY = 128, 128, 128
 BLACK = 0, 0, 0
 WHITE = 255, 255, 255
 
+
 board_json = None
 board_updated = False
+clientSocket = None
 
 def start_visualizer():
     global board_json
     global board_updated
+    global clientSocket
 
     pygame.init()
     pygame.font.init()
@@ -47,6 +51,9 @@ def start_visualizer():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                if clientSocket is not None:
+                    print("quit")
+                    clientSocket.sendall(END_COMMAND)
                 sys.exit()
 
         if board_json is not None and board_updated:
@@ -68,22 +75,30 @@ def start_visualizer():
 def socket_thread(name):
     global board_json
     global board_updated
+    global clientSocket
     
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind((HOST, PORT))
-        s.listen()
-        conn, addr = s.accept()
+    clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    connected = False
 
-        with conn:
-            while True:
-                data = conn.recv(1024)
+    while not connected:
+        try:
+            clientSocket.connect((HOST, PORT))
+            connected = True
+        except Exception as e:
+            pass
 
-                if data:
-                    f = open(data.decode('utf8').replace("\r\n", ""))
-                    board_json = json.load(f)
-                    f.close
-                    board_updated = True
-                    conn.sendall(data)
+    clientSocket.sendall(b"connection")
+    while True:
+        data = clientSocket.recv(1024)
+        print(data)
+
+        if data:
+            f = open(data.decode('utf8').replace("\r\n", ""))
+            board_json = json.load(f)
+            f.close
+            board_updated = True
+            clientSocket.sendall(b"received and processed update")
+
 
 def draw_road(surface, color, start, end):
     point1 = get_display_location_coordinates(int(start['x']), int(start['y']))
