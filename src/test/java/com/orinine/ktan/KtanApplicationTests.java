@@ -59,7 +59,6 @@ class KtanApplicationTests {
 
         state.updateBoard(board);
         Thread.sleep(100000);
-
         socketObserver.close();
     }
 
