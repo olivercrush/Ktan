@@ -70,20 +70,19 @@ def socket_thread(name):
     global board_updated
     
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind((HOST, PORT))
-        s.listen()
-        conn, addr = s.accept()
+        s.connect((HOST, PORT))
+        s.sendall(b"connection")
 
-        with conn:
-            while True:
-                data = conn.recv(1024)
+        while True:
+            data = s.recv(1024)
 
-                if data:
-                    f = open(data.decode('utf8').replace("\r\n", ""))
-                    board_json = json.load(f)
-                    f.close
-                    board_updated = True
-                    conn.sendall(data)
+            if data:
+                f = open(data.decode('utf8').replace("\r\n", ""))
+                board_json = json.load(f)
+                f.close
+                board_updated = True
+                s.sendall(data)
+
 
 def draw_road(surface, color, start, end):
     point1 = get_display_location_coordinates(int(start['x']), int(start['y']))

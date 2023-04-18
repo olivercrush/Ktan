@@ -7,26 +7,56 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 public class DebugStateObserver implements StateObserver {
     private static final Logger LOGGER = LoggerFactory.getLogger(DebugStateObserver.class);
     private static final String DEBUG_FILENAME = "debug_board.json";
+    private static final String END_COMMAND = "VISUALIZER_DISCONNECT";
 
-    private final Socket socket;
+    private final ServerSocket serverSocket;
+    private final Socket clientSocket;
     private final PrintWriter out;
     private final BufferedReader in;
 
-    public DebugStateObserver(String ip, int port) throws IOException {
-        socket = new Socket(ip, port);
-        out = new PrintWriter(socket.getOutputStream(), true);
-        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    private State currentState;
+
+    // TODO : fix closing connection doesnt throw exception
+
+    public DebugStateObserver(int port) throws IOException {
+        serverSocket = new ServerSocket(port);
+        clientSocket = serverSocket.accept();
+        out = new PrintWriter(clientSocket.getOutputStream(), true);
+        in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
+        var thread = new Thread(this::startServer);
+        thread.start();
+    }
+
+    private void startServer() {
+        try {
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                if (END_COMMAND.equals(inputLine))
+                    break;
+            }
+            this.close();
+        }
+        catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public void notify(State stage) {
+    public void notify(State state) {
+        this.currentState = state;
+        sendStateToClient(state);
+    }
+
+    private void sendStateToClient(State state) {
         try {
-            var boardJson = BoardToJsonConverter.toJson(stage.getBoard());
+            var boardJson = BoardToJsonConverter.toJson(state.getBoard());
 
             var fileWriter = new FileWriter("visualizer/" + DEBUG_FILENAME);
             fileWriter.write(boardJson);
@@ -45,6 +75,9 @@ public class DebugStateObserver implements StateObserver {
     }
 
     public void close() throws IOException {
-        socket.close();
+        in.close();
+        out.close();
+        clientSocket.close();
+        serverSocket.close();
     }
 }
