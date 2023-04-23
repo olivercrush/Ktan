@@ -93,7 +93,8 @@ def socket_thread(name):
         print(data)
 
         if data:
-            f = open(data.decode('utf8').replace("\r\n", ""))
+            data = data.decode('utf8').replace("\r\n", "").replace("\n", "")
+            f = open(data)
             board_json = json.load(f)
             f.close
             board_updated = True
