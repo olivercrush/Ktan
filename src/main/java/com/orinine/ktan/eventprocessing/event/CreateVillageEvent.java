@@ -16,13 +16,13 @@ public class CreateVillageEvent extends Event {
         this.color = color;
     }
 
-    // TODO : find a unified way to update board without directly moddifying the grid values
-
     @Override
     public void process(State state) {
         var currentLocation = state.getBoard().getLocationGrid()[coordinates.y()][coordinates.x()];
-        var updatedLocation = new Location(color, Building.VILLAGE, currentLocation.port());
 
-        var updatedGrid = state.getBoard().getLocationGrid();
+        state.getBoard().setLocation(
+                new Location(color, Building.VILLAGE, currentLocation.port()),
+                coordinates
+        );
     }
 }
