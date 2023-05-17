@@ -1,4 +1,4 @@
-package com.orinine.ktan.board.utils;
+package com.orinine.ktan.state.board.utils;
 
 import com.orinine.ktan.state.board.util.HexToLocationsMapper;
 import com.orinine.ktan.state.board.util.Point;

@@ -1,6 +1,5 @@
-package com.orinine.ktan.board.json;
+package com.orinine.ktan.state.board.json;
 
-import com.orinine.ktan.state.board.json.BoardToJsonConverter;
 import com.orinine.ktan.state.board.model.*;
 import com.orinine.ktan.state.board.util.Point;
 import com.orinine.ktan.state.player.PlayerColor;
@@ -11,12 +10,13 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BoardToJsonConverterTest {
-    private static final ClassLoader classLoader = BoardToJsonConverterTest.class.getClassLoader();
+public class JsonToBoardConverterTest {
+
+    private static final ClassLoader classLoader = JsonToBoardConverterTest.class.getClassLoader();
 
     @Test
-    public void toJson() throws IOException {
-        var expectedJson = new String(classLoader.getResource("com/orinine/ktan/board/json/simpleBoard.json").openStream().readAllBytes());
+    public void fromJson() throws IOException {
+        var json = new String(classLoader.getResource("com/orinine/ktan/state/board/json/simpleBoard.json").openStream().readAllBytes());
 
         var hexGrid = new Hex[][] {
                 { new Hex(Hex.HexType.FOREST, 6), new Hex(Hex.HexType.DESERT, 0), new Hex(Hex.HexType.PASTURE, 8) },
@@ -36,7 +36,7 @@ public class BoardToJsonConverterTest {
             add(new Point(1, 4));
         }}));
 
-        assertEquals(expectedJson, BoardToJsonConverter.toJson(board));
+        assertEquals(board, JsonToBoardConverter.fromJson(json));
     }
 
 }

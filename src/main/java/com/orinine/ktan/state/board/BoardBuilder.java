@@ -9,9 +9,9 @@ import java.util.List;
 
 public class BoardBuilder {
 
-    private Hex[][] hexGrid;
-    private Location[][] locationGrid;
-    private List<Road> roads;
+    protected Hex[][] hexGrid;
+    protected Location[][] locationGrid;
+    protected List<Road> roads;
 
     protected BoardBuilder() {
 

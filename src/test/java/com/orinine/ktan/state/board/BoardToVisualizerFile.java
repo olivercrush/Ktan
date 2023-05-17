@@ -1,4 +1,4 @@
-package com.orinine.ktan.board;
+package com.orinine.ktan.state.board;
 
 import com.orinine.ktan.state.board.hexgrid.ClassicHexGridGenerator;
 import com.orinine.ktan.state.board.json.BoardToJsonConverter;

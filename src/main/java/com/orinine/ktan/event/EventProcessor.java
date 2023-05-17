@@ -1,6 +1,6 @@
-package com.orinine.ktan.eventprocessing;
+package com.orinine.ktan.event;
 
-import com.orinine.ktan.eventprocessing.event.Event;
+import com.orinine.ktan.event.types.Event;
 import com.orinine.ktan.state.State;
 
 public class EventProcessor {
