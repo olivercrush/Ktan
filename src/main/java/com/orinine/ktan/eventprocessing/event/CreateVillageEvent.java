@@ -1,4 +1,4 @@
-package com.orinine.ktan.event.types;
+package com.orinine.ktan.eventprocessing.event;
 
 import com.orinine.ktan.state.State;
 import com.orinine.ktan.state.board.model.Building;

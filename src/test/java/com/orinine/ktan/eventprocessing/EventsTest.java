@@ -1,16 +1,12 @@
-package com.orinine.ktan.event;
+package com.orinine.ktan.eventprocessing;
 
-import com.orinine.ktan.event.types.CreateVillageEvent;
+import com.orinine.ktan.eventprocessing.event.CreateVillageEvent;
 import com.orinine.ktan.state.State;
-import com.orinine.ktan.state.StateBuilder;
-import com.orinine.ktan.state.board.model.Board;
 import com.orinine.ktan.state.board.model.Building;
 import com.orinine.ktan.state.board.model.Port;
 import com.orinine.ktan.state.board.util.Point;
 import com.orinine.ktan.state.player.PlayerColor;
-import com.orinine.ktan.utils.BoardBuilderForTests;
 import com.orinine.ktan.utils.StateBuilderForTests;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

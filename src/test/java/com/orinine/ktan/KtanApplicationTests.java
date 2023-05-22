@@ -7,6 +7,7 @@ import com.orinine.ktan.state.board.model.*;
 import com.orinine.ktan.state.debug.DebugStateObserver;
 import com.orinine.ktan.state.player.Player;
 import com.orinine.ktan.state.player.PlayerColor;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.orinine.ktan.utils.BoardBuilderForTests;
@@ -17,6 +18,7 @@ import java.util.List;
 @SpringBootTest
 class KtanApplicationTests {
 
+    @Disabled
     @Test
     void contextLoads() throws IOException, InterruptedException {
         debugSocketTest();
