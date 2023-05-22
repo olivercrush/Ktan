@@ -2,7 +2,7 @@ package com.orinine.ktan;
 
 import com.orinine.ktan.state.State;
 import com.orinine.ktan.state.board.BoardBuilder;
-import com.orinine.ktan.state.board.hexgrid.ClassicHexGridGenerator;
+import com.orinine.ktan.state.board.generation.hexgrid.ClassicHexGridGenerator;
 import com.orinine.ktan.state.board.model.*;
 import com.orinine.ktan.state.debug.DebugStateObserver;
 import com.orinine.ktan.state.player.Player;
@@ -25,8 +25,8 @@ class KtanApplicationTests {
     private void debugSocketTest() throws IOException, InterruptedException {
         var socketObserver = new DebugStateObserver(65500);
         var board = BoardBuilderForTests.aBoardBuilderForTests().build();
-
         var state = new State(board, new Player[]{ new Player(PlayerColor.RED), new Player(PlayerColor.BLUE) }, List.of(socketObserver));
+
         Thread.sleep(100000);
         socketObserver.close();
     }

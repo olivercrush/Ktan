@@ -8,9 +8,9 @@ import java.util.List;
 
 public class StateBuilder {
 
-    private Board board;
-    private Player[] players;
-    private List<StateObserver> observers;
+    protected Board board;
+    protected Player[] players;
+    protected List<StateObserver> observers;
 
     protected StateBuilder() {
 

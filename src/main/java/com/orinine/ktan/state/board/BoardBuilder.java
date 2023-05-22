@@ -37,10 +37,7 @@ public class BoardBuilder {
     }
 
     public Board build() {
-        if (locationGrid != null && roads != null)
-            return new Board(hexGrid, locationGrid, roads);
-
-        return new Board(hexGrid);
+        return new Board(hexGrid, locationGrid, roads);
     }
 
 }

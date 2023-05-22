@@ -1,5 +1,6 @@
 package com.orinine.ktan.state.board.json;
 
+import com.orinine.ktan.state.board.BoardBuilder;
 import com.orinine.ktan.state.board.model.*;
 import com.orinine.ktan.state.board.util.Point;
 import com.orinine.ktan.state.player.PlayerColor;
@@ -23,7 +24,7 @@ public class BoardToJsonConverterTest {
                 { new Hex(Hex.HexType.HILLS, 10), new Hex(Hex.HexType.HILLS, 2), new Hex(Hex.HexType.PASTURE, 11) }
         };
 
-        var board = new Board(hexGrid);
+        var board = BoardBuilder.aBoardBuilder().setHexGrid(hexGrid).build();
         board.setLocation(new Location(PlayerColor.RED, Building.VILLAGE, Port.EMPTY), new Point(3, 3));
         board.setLocation(new Location(PlayerColor.BLUE, Building.CITY, Port.EMPTY), new Point(1, 5));
         board.addRoad(new Road(PlayerColor.RED, new ArrayList<Point>() {{
