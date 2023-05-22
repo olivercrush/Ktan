@@ -12,8 +12,10 @@ public class State {
     private Player[] players;
     private final List<StateObserver> observers;
 
-    public State(List<StateObserver> observers) {
+    public State(Board board, Player[] players, List<StateObserver> observers) {
         this.observers = observers;
+        this.players = players;
+        updateBoard(board);
     }
 
     public Board getBoard() {

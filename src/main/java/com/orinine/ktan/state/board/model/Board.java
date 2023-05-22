@@ -15,19 +15,6 @@ public class Board {
 
     }
 
-    public Board(Hex[][] hexGrid) {
-        this.hexGrid = hexGrid;
-
-        locationGrid = new Location[this.hexGrid.length * 3][this.hexGrid[0].length * 3 + 1];
-        for (var i = 0; i < locationGrid.length; i++) {
-            for (var j = 0; j < locationGrid[i].length; j++) {
-                locationGrid[i][j] = new Location(null, Building.EMPTY, Port.EMPTY);
-            }
-        }
-
-        this.roads = new ArrayList<Road>();
-    }
-
     public Board(Hex[][] hexGrid, Location[][] locationGrid, List<Road> roads) {
         this.hexGrid = hexGrid;
         this.locationGrid = locationGrid;

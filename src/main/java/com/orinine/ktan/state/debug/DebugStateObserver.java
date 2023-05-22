@@ -46,10 +46,10 @@ public class DebugStateObserver implements StateObserver {
             }
             this.close();
         } catch (SocketException e) {
-            System.out.println("Client disconnected");
+            LOGGER.info("Client disconnected");
         }
         catch (IOException e) {
-            throw new RuntimeException(e);
+            LOGGER.error("Could not start DebugStateObserver", e);
         }
     }
 
