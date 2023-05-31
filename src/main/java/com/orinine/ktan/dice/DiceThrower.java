@@ -8,6 +8,7 @@ public class DiceThrower {
         return new Random().nextInt(5) + 1;
     }
 
+    // TODO : simulate probabilities of 2 die
     public static int throwTwoDice() {
         return throwDice() + throwDice();
     }
