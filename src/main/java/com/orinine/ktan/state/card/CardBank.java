@@ -1,4 +1,4 @@
-package com.orinine.ktan.card;
+package com.orinine.ktan.state.card;
 
 import java.util.List;
 import java.util.Optional;

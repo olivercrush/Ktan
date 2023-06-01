@@ -1,4 +1,4 @@
-package com.orinine.ktan.card;
+package com.orinine.ktan.state.card;
 
 public record DevelopmentCard(DevelopmentCardType type) {
     public enum DevelopmentCardType {

@@ -1,4 +1,4 @@
-package com.orinine.ktan.card;
+package com.orinine.ktan.state.card;
 
 public record UniqueCard(UniqueCardType type) {
     enum UniqueCardType {
