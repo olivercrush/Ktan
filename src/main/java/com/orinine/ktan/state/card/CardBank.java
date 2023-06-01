@@ -17,20 +17,29 @@ public class CardBank {
     }
 
     public Optional<ResourceCard> takeResourceCard(ResourceCard.ResourceCardType type) {
-        return resourceCards.stream()
-                .filter(resourceCard -> resourceCard.type() == type)
+        Optional<ResourceCard> resourceCard = resourceCards.stream()
+                .filter(r -> r.type() == type)
                 .findFirst();
+
+        resourceCard.ifPresent(r -> resourceCards.remove(r));
+        return resourceCard;
     }
 
     public Optional<DevelopmentCard> takeDevelopmentCard() {
-        return developmentCards.size() == 0 ?
+        Optional<DevelopmentCard> developmentCard = developmentCards.size() == 0 ?
                 Optional.empty() :
                 Optional.of(developmentCards.get(new Random().nextInt(developmentCards.size() - 1)));
+
+        developmentCard.ifPresent(d -> developmentCards.remove(d));
+        return developmentCard;
     }
 
     public Optional<UniqueCard> takeUniqueCard(UniqueCard.UniqueCardType type) {
-        return uniqueCards.stream()
-                .filter(uniqueCard -> uniqueCard.type() == type)
+        Optional<UniqueCard> uniqueCard = uniqueCards.stream()
+                .filter(u -> u.type() == type)
                 .findFirst();
+
+        uniqueCard.ifPresent(u -> uniqueCards.remove(u));
+        return uniqueCard;
     }
 }
