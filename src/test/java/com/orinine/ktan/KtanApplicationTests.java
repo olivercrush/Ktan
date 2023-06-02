@@ -4,9 +4,11 @@ import com.orinine.ktan.state.State;
 import com.orinine.ktan.state.board.BoardBuilder;
 import com.orinine.ktan.state.board.generation.hexgrid.ClassicHexGridGenerator;
 import com.orinine.ktan.state.board.model.*;
+import com.orinine.ktan.state.card.CardBank;
 import com.orinine.ktan.state.debug.DebugStateObserver;
 import com.orinine.ktan.state.player.Player;
 import com.orinine.ktan.state.player.PlayerColor;
+import com.orinine.ktan.utils.CardBankBuilderForTests;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,7 +29,8 @@ class KtanApplicationTests {
     private void debugSocketTest() throws IOException, InterruptedException {
         var socketObserver = new DebugStateObserver(65500);
         var board = BoardBuilderForTests.aBoardBuilderForTests().build();
-        var state = new State(board, new Player[]{ new Player(PlayerColor.RED), new Player(PlayerColor.BLUE) }, List.of(socketObserver));
+        var cardBank = CardBankBuilderForTests.aCardBankBuilderForTests().build();
+        var state = new State(board, cardBank, new Player[]{ new Player(PlayerColor.RED), new Player(PlayerColor.BLUE) }, List.of(socketObserver));
 
         Thread.sleep(100000);
         socketObserver.close();
