@@ -4,6 +4,9 @@ import com.orinine.ktan.utils.CardBankBuilderForTests;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -27,6 +30,21 @@ public class CardBankTest {
         assertTrue(rockCard.isPresent());
         assertEquals(ResourceCard.ResourceCardType.ROCK, rockCard.get().type());
         assertEquals(93, cardBank.resourceCards.size());
+    }
+
+    @Test
+    public void putResourceCardsTest() {
+        cardBank = CardBankBuilderForTests.aCardBankBuilderForTests()
+                .setResourceCards(new ArrayList<ResourceCard>())
+                .build();
+
+        cardBank.putResourceCards(List.of(new ResourceCard(ResourceCard.ResourceCardType.ROCK), new ResourceCard(ResourceCard.ResourceCardType.WOOD)));
+        assertEquals(2, cardBank.resourceCards.size());
+        assertTrue(cardBank.takeResourceCard(ResourceCard.ResourceCardType.ROCK).isPresent());
+        assertTrue(cardBank.takeResourceCard(ResourceCard.ResourceCardType.WOOD).isPresent());
+        assertTrue(cardBank.takeResourceCard(ResourceCard.ResourceCardType.WHEAT).isEmpty());
+        assertTrue(cardBank.takeResourceCard(ResourceCard.ResourceCardType.SHEEP).isEmpty());
+        assertTrue(cardBank.takeResourceCard(ResourceCard.ResourceCardType.BRICK).isEmpty());
     }
 
     @Test

@@ -25,6 +25,10 @@ public class CardBank {
         return resourceCard;
     }
 
+    public void putResourceCards(List<ResourceCard> resourceCards) {
+        this.resourceCards.addAll(resourceCards);
+    }
+
     public Optional<DevelopmentCard> takeDevelopmentCard() {
         Optional<DevelopmentCard> developmentCard = developmentCards.size() == 0 ?
                 Optional.empty() :
