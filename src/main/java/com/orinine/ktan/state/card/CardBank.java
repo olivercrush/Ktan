@@ -6,9 +6,9 @@ import java.util.Random;
 
 public class CardBank {
 
-    private List<ResourceCard> resourceCards;
-    private List<DevelopmentCard> developmentCards;
-    private List<UniqueCard> uniqueCards;
+    List<ResourceCard> resourceCards;
+    List<DevelopmentCard> developmentCards;
+    List<UniqueCard> uniqueCards;
 
     public CardBank(List<ResourceCard> resourceCards, List<DevelopmentCard> developmentCards, List<UniqueCard> uniqueCards) {
         this.resourceCards = resourceCards;
